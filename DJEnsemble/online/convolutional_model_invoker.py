@@ -1,8 +1,9 @@
 from functools import reduce
-from series_generator import SeriesGenerator
-from configuration_manager import ConfigurationManager
-from dataset_manager import DatasetManager
-import tensorflow.compat.v1 as tf
+from .series_generator import SeriesGenerator
+from .configuration_manager import ConfigurationManager
+from .dataset_manager import DatasetManager
+# import tensorflow.compat.v1 as tf
+import tensorflow as tf
 import pandas as pd
 import numpy as np
 import ray

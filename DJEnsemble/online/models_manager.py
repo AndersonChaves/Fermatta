@@ -1,4 +1,4 @@
-from learner import Learner
+from .learner import Learner
 from tensorflow.keras.models import model_from_json
 import fnmatch
 import ray
@@ -86,3 +86,6 @@ class ModelsManager():
 
     def get_models(self):
         return self.temporal_models + self.convolutional_models
+
+if __name__ == "__main__":
+    print("Teste")

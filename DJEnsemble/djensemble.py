@@ -10,10 +10,10 @@ from functools import reduce
 import itertools
 import pandas as pd
 import numpy as np
-from dataset_manager import DatasetManager
-from models_manager import ModelsManager
-from series_generator import SeriesGenerator
-from convolutional_model_invoker import ConvolutionalModelInvoker
+from online.dataset_manager import DatasetManager
+from online.models_manager import ModelsManager
+from online.series_generator import SeriesGenerator
+from online.convolutional_model_invoker import ConvolutionalModelInvoker
 import time
 
 import copy
@@ -88,6 +88,7 @@ class DJEnsemble:
             print("Total time for tile evaluation: ", round(time.time() - start, 2), " seconds")
             #print("Average tile error: ", average_error, "\n")
             result_by_tile.append(average_error)
+            break
 
         # Returns the total average rmses and the tiles rmses
         #total_rmse = sum(result_by_tile) / self.tiles.shape[0]

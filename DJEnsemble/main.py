@@ -1,11 +1,12 @@
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
-tf.enable_eager_execution()
+# import tensorflow.compat.v1 as tf
+# tf.disable_v2_behavior()
+# tf.enable_eager_execution()
 
+import tensorflow as tf
 import pandas as pd
 from djensemble import DJEnsemble
 from datetime import datetime
-from configuration_manager import ConfigurationManager
+from online.configuration_manager import ConfigurationManager
 import time
 
 def print_time():
@@ -23,5 +24,5 @@ def run_experiment(time_weight):
     print("Total time: ", end - start, " seconds")
 
 if __name__ == '__main__':
-    for time_weight in [0.2]:
+    for time_weight in [0.0]:
         run_experiment(time_weight)
